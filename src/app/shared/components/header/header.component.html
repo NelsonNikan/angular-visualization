@@ -3,21 +3,25 @@
     <div class="toggle">
       <app-hamburger></app-hamburger>
     </div>
-    <div class="brand">Brand</div>
+    <h2 class="brand">
+      Data visualization
+    </h2>
   </div>
 
   <div class="functions">
-    <button>Fullscreen</button>
-    <div>
-      Search
-    </div>
+    <app-fullscreen></app-fullscreen>
+    <app-search></app-search>
   </div>
 
   <div class="settings">
-    <nav>
-      <li>Alert</li>
-      <li>Profile</li>
-      <li>Config</li>
-    </nav>
+    <button>
+      <i class="fas fa-bell"></i>
+    </button>
+    <button>
+      <i class="fas fa-user"></i>
+    </button>
+    <button (click)="toggleSetting()">
+      <i class="fas fa-sliders-h"></i>
+    </button>
   </div>
 </header>

@@ -1,12 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SettingService } from '@shared/services/setting.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private settingService: SettingService) {}
 
   ngOnInit() {}
+
+  toggleSetting(): void {
+    this.settingService.toggle();
+  }
 }
